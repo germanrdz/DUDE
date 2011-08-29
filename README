@@ -1,0 +1,83 @@
+DUDE
+
+Is a Javascript engine that lets you build HTML forms using JSON syntax.
+Simple as that.
+
+
+var data = {
+    clientId: 1,
+    nombre: "Nombre del Cliente",
+    date: "20/08/1985",
+    title: "Titulo del Formulario",
+    description: "Descripcion del formulario",
+    fields: 
+    [
+        {
+            fieldId: 1,
+            name: "name",
+            label: "Your Name:",
+            type: "string",
+            rules: {
+                required: true
+            },
+            className: "nameClass",
+        },
+        {
+            fieldId: 2,
+            name: "age",
+            label: "Your Age:",
+            type: "integer",
+            rules: {
+                digits: true,
+                required: true,
+            },
+            description: "Please type your real age",
+            value: 25
+        },
+        {
+            fieldId: 3,
+            name: "sex",
+            label: "Sex:",
+            type: "select",
+            rules: {
+                required : true
+            },
+            options: [
+                { value: "", text: "-- Select --" },
+                { value: "m", text: "Male" },
+                { value: "f", text: "Female" }
+            ]
+        },
+        {
+            fieldId: 4,
+            name: "interests",
+            label: "Check your interests",
+            type: "checkbox",
+            options: [
+                { value: "1", text: "Soccer" },
+                { value: "2", text: "Base Ball" }
+            ],
+            rules: {
+                required: true,
+            }
+        },
+        {
+            fieldId: 6,
+            name: "beverage",
+            label: "Pick your Beverage",
+            type: "radio",
+            options: [
+                { value: "water", text: "Water" },
+                { value: "coffee", text: "Coffee" }
+            ],
+            rules: { required: true }
+        },
+        {
+            fieldId: 10,
+            name: "submit",
+            label: "Submit",
+            type: "submit",
+            className: ""
+        }
+    ]
+};
